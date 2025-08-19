@@ -25,12 +25,18 @@ Types of Rules that is present in the KillBill.
 - Billing alignment rules
 - Subscription alignment rules
 	- Add on phase alignment
-	- Plan cancellation timing: Available options:
+		- START_OF_BUNDLE
+		- START_OF_SUBSCRIPTION
+	- **Plan cancellation timing**: When the cancellation of a plan occurs. valid options are:
 		- END_OF_TERM
 		- IMMEDIATE
-	- Plan change timing: Available options:
+	- **Plan change timing**: When the change of a plan occurs. available options:
 		- END_OF_TERM
 		- IMMEDIATE
 		- ILLEGAL
-	- 
-	- 
+	- **Plan change phase alignment**: Decides how the phases of a new plan should align with the phases of the existing plan when plan is changed. available options are:
+		- START_OF_SUBSCRIPTION: The plan is aligned with when the user started.
+		- START_OF_BUNDLE: Similar to start of subscription
+		- CHANGE_OF_PLAN: The plan is like the user subscribed to new plan
+		- CHANGE_OF_PRICELIST: The subscription aligns with the start of price list change.
+	- **Plan change price list choice**: This rule uses the change context and specifies which price list is should be chosen for specific changes. This rule basically configures if the price list is sticky or not
